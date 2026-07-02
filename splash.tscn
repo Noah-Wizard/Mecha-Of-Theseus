@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://oaejmmjsry0a"]
+
+[ext_resource type="Script" uid="uid://1rx3jxac2qql" path="res://splash.gd" id="1_b04ml"]
+
+[node name="Splash" type="Control" unique_id=1995236952]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b04ml")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1807999061]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="WarningText" type="RichTextLabel" parent="." unique_id=2044730940]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 64
+text = "WARNING:
+This space game has some generic warp-speed animations that could be dangerous to some of you. 
+Only play if you know it's safe to see flashing/strobing lights."
+horizontal_alignment = 1
+
+[node name="ByeText" type="RichTextLabel" parent="." unique_id=1758393526]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 64
+text = "
+Best to be safe!
+
+This game will now stop, and you can close this tab."
+horizontal_alignment = 1
+
+[node name="ExitButton" type="Button" parent="." unique_id=213645785]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 536.0
+offset_right = 704.0
+offset_bottom = 644.0
+theme_override_font_sizes/font_size = 32
+text = "EXIT"
+
+[node name="PlayButton" type="Button" parent="." unique_id=1113774617]
+layout_mode = 0
+offset_left = 909.0
+offset_top = 559.0
+offset_right = 1021.0
+offset_bottom = 612.0
+theme_override_font_sizes/font_size = 32
+text = "Play"
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

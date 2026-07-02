@@ -1,0 +1,366 @@
+[gd_scene format=3 uid="uid://dm4nk85kue6kn"]
+
+[ext_resource type="Script" uid="uid://ymtkvjw3cbce" path="res://game.gd" id="1_7jktm"]
+[ext_resource type="Texture2D" uid="uid://bbqifspwlc0nu" path="res://images/space-still.png" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://bvftk5et4txwm" path="res://images/space-warp.png" id="2_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://b27cbd3ojvbpe" path="res://images/space_blank.png" id="3_feb5d"]
+[ext_resource type="Texture2D" uid="uid://j3cudh0hftld" path="res://images/mecha-01.png" id="4_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://31iq1mwomswc" path="res://images/puffin-1.png" id="6_ryrav"]
+[ext_resource type="Texture2D" uid="uid://bbcx0lwu66vme" path="res://images/flamingo-1.png" id="7_eow3j"]
+
+[sub_resource type="Animation" id="Animation_e2o6t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_feb5d"]
+resource_name = "scroll_stars_slow"
+length = 300.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 297.63333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-888.085, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fc0e3"]
+_data = {
+&"RESET": SubResource("Animation_e2o6t"),
+&"scroll_stars_slow": SubResource("Animation_feb5d")
+}
+
+[sub_resource type="Animation" id="Animation_eow3j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_j5wjh"]
+resource_name = "new_animation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-5957, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vef74"]
+_data = {
+&"RESET": SubResource("Animation_eow3j"),
+&"new_animation": SubResource("Animation_j5wjh")
+}
+
+[sub_resource type="Animation" id="Animation_fc0e3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7jktm"]
+resource_name = "scroll_stars_fast"
+length = 4.233333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333336, 2.0333333, 2.0666666, 4.0666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-5953.35, 0), Vector2(0, 0), Vector2(-5953.35, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.03333336, 1.0333333, 2.0333333, 2.9333334, 3.9333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ryrav"]
+resource_name = "scroll_stars_fast_2"
+length = 2.0
+loop_mode = 1
+step = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333336, 1.9605204),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-5953.35, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ryrav"]
+_data = {
+&"RESET": SubResource("Animation_fc0e3"),
+&"scroll_stars_fast": SubResource("Animation_7jktm"),
+&"scroll_stars_fast_2": SubResource("Animation_ryrav")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryrav"]
+bg_color = Color(0.06740256, 0.053791232, 0.082952924, 0.84313726)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.65769005, 0.52140003, 0.66, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Game" type="Control" unique_id=1760124715]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7jktm")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1198908461]
+
+[node name="Background_BLANK" type="TextureRect" parent="CanvasLayer" unique_id=45715218]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_feb5d")
+expand_mode = 2
+
+[node name="Background_SLOW" type="TextureRect" parent="CanvasLayer" unique_id=1490494811]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2075.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.02, 1.02)
+texture = ExtResource("1_80nbo")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Background_SLOW" unique_id=66051928]
+libraries/ = SubResource("AnimationLibrary_fc0e3")
+autoplay = &"scroll_stars_slow"
+
+[node name="Background_FAST2" type="TextureRect" parent="CanvasLayer" unique_id=670169886]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 5955.1377
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_e2o6t")
+expand_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Background_FAST2" unique_id=443494508]
+libraries/ = SubResource("AnimationLibrary_vef74")
+autoplay = &"new_animation"
+
+[node name="Background_FAST" type="TextureRect" parent="CanvasLayer" unique_id=502759474]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 5955.1377
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_e2o6t")
+expand_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Background_FAST" unique_id=179305401]
+libraries/ = SubResource("AnimationLibrary_ryrav")
+autoplay = &"scroll_stars_fast"
+
+[node name="Mecha1" type="TextureRect" parent="CanvasLayer" unique_id=884737108]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -480.0
+offset_right = 480.0
+offset_bottom = 540.0
+grow_horizontal = 2
+texture = ExtResource("4_fc0e3")
+
+[node name="PuffinHead" type="Panel" parent="CanvasLayer" unique_id=2031899361]
+offset_left = 24.0
+offset_top = 290.0
+offset_right = 172.0
+offset_bottom = 438.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ryrav")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PuffinHead" unique_id=762072049]
+layout_mode = 0
+offset_left = -31.0
+offset_top = 16.0
+offset_right = 194.77777
+offset_bottom = 143.0
+texture = ExtResource("6_ryrav")
+expand_mode = 1
+
+[node name="PuffinText" type="Panel" parent="CanvasLayer" unique_id=1665204327]
+offset_left = 24.0
+offset_top = 446.0
+offset_right = 553.0
+offset_bottom = 625.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ryrav")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PuffinText" unique_id=1370001670]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/PuffinText/MarginContainer" unique_id=1376588516]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
+text = "Aha! So you had no plan at all!"
+
+[node name="FlamingoText" type="Panel" parent="CanvasLayer" unique_id=1120055040]
+offset_left = 617.0
+offset_top = 446.0
+offset_right = 1134.0
+offset_bottom = 625.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ryrav")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/FlamingoText" unique_id=585280236]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/FlamingoText/MarginContainer" unique_id=270285596]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
+text = "Nah, the plan is in motion.
+I know a place where we can get not just one leg... but MATCHING LEGS!!
+Gently used!"
+
+[node name="FlamingoHead" type="Panel" parent="CanvasLayer" unique_id=549741422]
+offset_left = 986.0
+offset_top = 289.0
+offset_right = 1134.0
+offset_bottom = 437.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ryrav")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/FlamingoHead" unique_id=182190228]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 42.0
+offset_right = 180.55556
+offset_bottom = 143.0
+texture = ExtResource("7_eow3j")
+expand_mode = 1
+flip_h = true
